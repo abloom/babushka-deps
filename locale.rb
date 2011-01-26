@@ -17,7 +17,7 @@ dep 'set.locale' do
   }
   on :apt do
     meet {
-      sudo("echo 'LANG=#{local_locale}' > /etc/default/locale")
+      sudo("echo 'LANG=#{local_locale}' >> /etc/profile")
     }
   end
 end
